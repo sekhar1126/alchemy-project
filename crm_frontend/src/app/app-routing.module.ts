@@ -6,6 +6,8 @@ import { SignupComponent } from './signup/signup.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { AppComponent } from './app.component';
+import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -15,7 +17,10 @@ const routes: Routes = [
   { path: 'footer', component: FooterComponent },
   { path: 'nav', component: NavbarComponent },
   {path:'signup',component:SignupComponent},
-  {path:'sidebar',component:SidebarComponent}
+  {path:'sidebar',component:SidebarComponent},
+  {path:'sidebar',component:SidebarComponent},
+  {path:'forgot-password',component:ForgetPasswordComponent},
+  
 
 ];
 

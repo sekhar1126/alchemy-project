@@ -17,6 +17,9 @@ import { MatSidenavModule} from '@angular/material/sidenav';
 import { MatButtonModule} from '@angular/material/button';
 import { MatIconModule} from '@angular/material/icon';
 import {  MatDividerModule} from '@angular/material/divider';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ToastrModule } from 'ngx-toastr';
+import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 
 
 
@@ -28,7 +31,9 @@ import {  MatDividerModule} from '@angular/material/divider';
     SignupComponent,
     FooterComponent,
     NavbarComponent,
-    SidebarComponent
+    SidebarComponent,
+    ForgetPasswordComponent,
+  
   ],
   imports: [
     BrowserModule,
@@ -39,8 +44,13 @@ import {  MatDividerModule} from '@angular/material/divider';
     MatButtonModule,
     MatIconModule,
     MatDividerModule,
-  
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
+    ToastrModule.forRoot(),
+    
   ],
+ 
   providers: [
     provideClientHydration(),
     provideAnimationsAsync()

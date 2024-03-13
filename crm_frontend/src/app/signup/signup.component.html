@@ -1,39 +1,128 @@
 
-<div class="signup">
-<h2>Sign Up</h2>
+<div class="background">
 
-<form class="row g-3">
-  <div class="col-md-6">
-    <label for="inputEmail4" class="form-label">First Name</label>
-    <input type="text" class="form-control" id="inputEmail4">
-  </div>
-  <div class="col-md-6">
-    <label for="inputPassword4" class="form-label">Last Name</label>
-    <input type="text" class="form-control" id="inputPassword4">
-  </div>
-  <div class="col-md-6">
-    <label for="inputEmail4" class="form-label">Email</label>
-    <input type="email" class="form-control" id="inputEmail4">
-  </div>
-  <div class="col-md-6">
-    <label for="inputPassword4" class="form-label">Phone number</label>
-    <input type="number" class="form-control" id="inputPassword4"  required="*This field is required">
+  <div class="c1">
+    <div class="c2">
+      <div class="c3">
+        <div class="c4">
+          <h2 style="color: azure; margin-left: 43%;">Sign Up</h2>
+        </div>
+        <div class="">
+          <form [formGroup]="fm" (submit)="registeruser(fm.value)" novalidate>
+            <div class="form-group"> 
+              <p>First Name</p>
+              <input
+                type="text"
+                formControlName="firstname"
+                required
+                name="firstname"
+                placeholder="Ex: chandra"
+                class="form-control"
+              />
+             
+              <small
+                class="form-text text-danger"
+                *ngIf="submitted && !fm.controls['firstname'].valid"
+                >Name must be given</small
+              >
+            </div>
+   
+   
+   
+            <div class="form-group">
+             <p>Last Name</p> 
+              <input
+                type="text"
+                formControlName="lastname"
+                required
+                name="Lastname"
+                placeholder="Ex sekhar"
+                class="form-control"
+              />
+             
+              <small
+                class="form-text text-danger"
+                *ngIf="submitted && !fm.controls['Lastname'].valid"
+                >Name must be given</small
+              >
+            </div>
+   
+            <div class="form-group">
+             <p>Email</p> 
+              <input
+                type="email"
+                formControlName="email"
+                required
+                name="email"
+                placeholder="ex: chandrasekhar1126@gmail.com"
+                class="form-control"
+                pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+              />
+          
+              <small
+                class="form-text text-danger"
+                *ngIf="submitted && !fm.controls['email'].valid"
+   
+                >Email id must be given</small
+              >
+            </div>
+   
+            <div class="form-group">
+              <p>phone no</p>
+              <input
+                type="phone"
+                maxlength="10"
+                formControlName="mobile"
+                required
+                name="mobile"
+                placeholder="ex: 98482233"
+                class="form-control"
+              />
+              
+              <small
+                class="form-text text-danger"
+                *ngIf="submitted && !fm.controls['mobile'].valid"
+                >Mobile no must be given</small>
+            </div>
+   
+   
+            <div class="form-group">
+             <P>Password</P> 
+              <input
+                type="password"
+                formControlName="password"
+                required
+                name="password"
+                placeholder="*********"
+                class="form-control"
+              />
+              <br>
+              <small
+                class="form-text text-danger"
+                *ngIf="submitted && !fm.controls['password'].valid"
+                >Password must be given</small
+              >
+            </div>
+            <h6 style="color: azure;">Already Registerd? <a href="login" class="reg">Login</a></h6>
+            <br>
+            <button type="submit" class="btn btn-primary" [disabled]="!fm || !fm.valid">Register</button>
+         
+            
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="col-md-6">
-    <label for="inputCity" class="form-label">Password</label>
-    <input type="password" class="form-control" id="inputCity" required>
-  </div>
-  <h6>Already Registerd? <a href="login" class="reg">Login</a></h6>
   <div class="col-12">
-    <button type="submit" class="btn btn-primary">Sign up</button>
-  </div>
+   
+  </div> 
 
 
-</form>
 
 
-</div>
+
+
 
 
 
