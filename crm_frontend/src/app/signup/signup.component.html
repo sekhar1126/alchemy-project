@@ -14,17 +14,15 @@
               <input
                 type="text"
                 formControlName="firstname"
-                required
+                
                 name="firstname"
                 placeholder="Ex: chandra"
                 class="form-control"
-              />
+                required/>
              
               <small
                 class="form-text text-danger"
-                *ngIf="submitted && !fm.controls['firstname'].valid"
-                >Name must be given</small
-              >
+                *ngIf="submitted && fm.controls['firstname'].invalid" >Name must be given</small>
             </div>
    
    
@@ -35,16 +33,13 @@
                 type="text"
                 formControlName="lastname"
                 required
-                name="Lastname"
+                name="lastname"
                 placeholder="Ex sekhar"
-                class="form-control"
-              />
+                class="form-control"/>
              
               <small
                 class="form-text text-danger"
-                *ngIf="submitted && !fm.controls['Lastname'].valid"
-                >Name must be given</small
-              >
+                *ngIf="submitted && fm.controls['lastname'].invalid" >Name must be given</small>
             </div>
    
             <div class="form-group">
@@ -53,18 +48,14 @@
                 type="email"
                 formControlName="email"
                 required
+                pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
                 name="email"
                 placeholder="ex: chandrasekhar1126@gmail.com"
-                class="form-control"
-                pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
-              />
+                class="form-control"/>
           
               <small
                 class="form-text text-danger"
-                *ngIf="submitted && !fm.controls['email'].valid"
-   
-                >Email id must be given</small
-              >
+                *ngIf="submitted && fm.controls['email'].invalid">Email id must be given</small>
             </div>
    
             <div class="form-group">
@@ -76,13 +67,11 @@
                 required
                 name="mobile"
                 placeholder="ex: 98482233"
-                class="form-control"
-              />
+                class="form-control"/>
               
               <small
                 class="form-text text-danger"
-                *ngIf="submitted && !fm.controls['mobile'].valid"
-                >Mobile no must be given</small>
+                *ngIf="submitted && fm.controls['mobile'].invalid">Mobile no must be given</small>
             </div>
    
    
@@ -94,14 +83,11 @@
                 required
                 name="password"
                 placeholder="*********"
-                class="form-control"
-              />
+                class="form-control"/>
               <br>
               <small
                 class="form-text text-danger"
-                *ngIf="submitted && !fm.controls['password'].valid"
-                >Password must be given</small
-              >
+                *ngIf="submitted && fm.controls['password'].invalid">Password must be given</small>
             </div>
             <h6 style="color: azure;">Already Registerd? <a href="login" class="reg">Login</a></h6>
             <br>

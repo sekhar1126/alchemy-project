@@ -1,3 +1,7 @@
+
+
+
+
 mat-toolbar {
     background-image: linear-gradient(to right, #141e30, #243b55);
     color: white;
@@ -15,14 +19,15 @@ mat-toolbar {
     text-align: center;
   }
    
-  .content {
+  /* .content {
     height: calc(150vh - 120px);
    margin: 16px;
     margin-left: 32px;
     padding: 26px;
+    background-color: whitesmoke;
    
     
-  }
+  } */
    
   mat-sidenav-container {
     height: calc(100vh - 65px);

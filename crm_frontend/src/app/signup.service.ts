@@ -5,12 +5,15 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class SignupService {
-  BASEURL:string="http://localhost:9191/user/";
+  BASEURL:string="http://localhost:8080/user/";
     constructor(private http:HttpClient)
      {
    
      }
      register(data:any){
       return this.http.post<any>(this.BASEURL+"saveuser",data);
+    }
+    validate(data:any){
+      return this.http.post<any>(this.BASEURL+"login",data);
     }
   }

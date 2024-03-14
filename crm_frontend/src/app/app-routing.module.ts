@@ -8,6 +8,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { AppComponent } from './app.component';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
+import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path:'sidebar',component:SidebarComponent},
   {path:'sidebar',component:SidebarComponent},
   {path:'forgot-password',component:ForgetPasswordComponent},
+  {path:'about',component:AboutComponent}
   
 
 ];

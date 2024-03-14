@@ -7,7 +7,8 @@ import { SignupService } from '../signup.service';
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
-  styleUrl: './signup.component.css'
+  
+  styleUrl:'./signup.component.css'
 })
 export class SignupComponent implements OnInit{
 user: any;
@@ -40,6 +41,7 @@ submitted=false;
  
   registeruser(values:any){
     this.submitted=true
+    
     if(this.fm.valid){
       console.log(values)
       this.api.register(values).subscribe({

@@ -20,6 +20,7 @@ import {  MatDividerModule} from '@angular/material/divider';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
+import { AboutComponent } from './about/about.component';
 
 
 
@@ -33,6 +34,7 @@ import { ForgetPasswordComponent } from './forget-password/forget-password.compo
     NavbarComponent,
     SidebarComponent,
     ForgetPasswordComponent,
+    AboutComponent,
   
   ],
   imports: [
